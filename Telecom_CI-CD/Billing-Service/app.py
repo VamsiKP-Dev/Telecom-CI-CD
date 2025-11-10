@@ -1,10 +1,12 @@
 
+
 from flask import Flask, jsonify
 import requests
 
 app = Flask(__name__)
 
-CUSTOMER_SERVICE_URL = "http://localhost:5000/customers"
+# Use Docker service name instead of localhost
+CUSTOMER_SERVICE_URL = "http://customer-service:5000/customers"
 
 @app.route('/')
 def home():
